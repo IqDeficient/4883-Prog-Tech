@@ -1,3 +1,12 @@
 |   #   | File                       | Description                                                |
 | :---: | -------------------------- | ---------------------------------------------------------- |
-| 1 | [Number of 1 Bits](https://github.com/IqDeficient/4883-Prog-Tech/tree/main/Assignments/A05/LeetCode%20191) | Finds number of 1 or set bits in a number |
+| 1 | [Number of 1 Bits - 191](https://github.com/IqDeficient/4883-Prog-Tech/tree/main/Assignments/A05/LeetCode%20191) | Finds number of 1 or set bits in a number |
+| 2 | [Container With Most Water - 11](https://github.com/IqDeficient/4883-Prog-Tech/tree/main/Assignments/A05/Leetcode%2011) | Finds largest potential basin between two heights|
+| 3 | [Valid Palidrome - 125](https://github.com/IqDeficient/4883-Prog-Tech/tree/main/Assignments/A05/Leetcode%20125) | When given a string s find if that string is a palindrome, return true or false |
+| 4 | [Count Odd Numbers in an Interval Range - 1523](https://github.com/IqDeficient/4883-Prog-Tech/tree/main/Assignments/A05/Leetcode%201523) | Given two numbers low and hight, return the count of odd numbers between them (inclusive) |
+| 5 | [Add Two Numbers - 2](https://github.com/IqDeficient/4883-Prog-Tech/tree/main/Assignments/A05/Leetcode%202) | Given two non-empty linked lists representing reversed numbers, add the two numbers and return the sum as a list |
+| 6 | [Unique Paths - 62](https://github.com/IqDeficient/4883-Prog-Tech/tree/main/Assignments/A05/Leetcode%2062) | Calculate the number of unique paths that can be taken on a m x n grid to reach the end point |
+| 7 | [Plus One - 66](https://github.com/IqDeficient/4883-Prog-Tech/tree/main/Assignments/A05/Leetcode%2066) | Given an integer array where each index represents a digit, increment the array by one and return the result |
+| 8 | [Add Binary - 67](https://github.com/IqDeficient/4883-Prog-Tech/tree/main/Assignments/A05/Leetcode%2067) | Given two strings of binary digits, determine their sum as a binary string |
+| 9 | [Sqrt(x) - 69](https://github.com/IqDeficient/4883-Prog-Tech/tree/main/Assignments/A05/Leetcode%2069) | Find the square root of a non negative number rounded down to nearest integer without any built-in funtion/operator |
+| 10 | [Reverse Integer - 7](https://github.com/IqDeficient/4883-Prog-Tech/tree/main/Assignments/A05/Leetcode%207) | When given x, return x with digits reversed not exceeding 32-bit integer limits |
