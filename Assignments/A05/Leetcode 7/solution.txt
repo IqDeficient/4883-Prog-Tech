@@ -1,0 +1,39 @@
+class Solution:
+    def reverse(self, x: int) -> int:
+        
+        ## Alternate way of doing with string slicing
+        # if x >= 0:
+        #     return int(str(x)[::-1])
+        # else:
+        #     val = abs(x)
+        #     return int(str(val)[::-1]) *-1
+
+        # Make an int to return
+        toReturn = 0
+        # Check if x is negative
+        if x >= 0:
+            # perform computation on num
+            num = x
+            while num != 0:
+                # Get last digit
+                ldigit = num % 10
+                # Place last digit onto return int
+                toReturn = toReturn * 10 + ldigit
+                # slice last digit off
+                num //= 10
+            if toReturn < 2147483647:
+                return toReturn
+            else:
+                return 0
+        else:
+            # same algorithm but multiplying by -1 at the end
+            num = abs(x)
+            while num != 0:
+                ldigit = num % 10
+                toReturn = toReturn * 10 + ldigit
+                num //= 10
+            toReturn *= -1
+            if toReturn > -2147483647:
+                return toReturn
+            else:
+                return 0

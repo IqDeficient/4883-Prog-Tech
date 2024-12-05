@@ -1,0 +1,12 @@
+class Solution:
+    def uniquePaths(self, m: int, n: int) -> int:
+        # Create a 2D DP table with dimensions m x n
+        dp = [[1] * n for _ in range(m)]
+        
+        # Fill the table by calculating paths for each cell
+        for i in range(1, m):
+            for j in range(1, n):
+                dp[i][j] = dp[i - 1][j] + dp[i][j - 1]
+        
+        # The bottom-right cell contains the total unique paths so return that
+        return dp[m - 1][n - 1]

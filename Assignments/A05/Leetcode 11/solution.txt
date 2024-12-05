@@ -1,0 +1,20 @@
+class Solution:
+    def maxArea(self, height: List[int]) -> int:
+        # Keep track of max right height and max left height and max area
+        left, right = 0, len(height) - 1
+        maxA = 0
+        
+        while left < right:
+            # Find current area
+            currA = min(height[left], height[right]) * (right - left)
+            # Update the maximum area
+            maxA = max(maxA, currA)
+            
+            # Move the pointer with the smaller height inward
+            if height[left] < height[right]:
+                left += 1
+            else:
+                right -= 1
+        
+        # return max area found
+        return maxA

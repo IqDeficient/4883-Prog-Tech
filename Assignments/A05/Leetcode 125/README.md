@@ -12,4 +12,4 @@
 
 |   #   | File                       | Description                                                |
 | :---: | -------------------------- | ---------------------------------------------------------- |
-| 1 | [solution.txt](https://github.com/IqDeficient/4883-Prog-Tech/blob/e270d89abaa608997bf16d117f7a9bde09102d72/Assignments/A05/Leetcode%20125/solution.txt) | Solution placed into a txt file. |
+| 1 | [solution.txt](https://github.com/IqDeficient/4883-Prog-Tech/blob/main/Assignments/A05/Leetcode%20125/solution.txt) | Solution placed into a txt file. |
