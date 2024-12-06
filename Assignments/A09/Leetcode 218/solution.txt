@@ -1,0 +1,30 @@
+class Solution:
+    def getSkyline(self, buildings: List[List[int]]) -> List[List[int]]:
+        # Collect all events: start and end of buildings
+        events = []
+        for left, right, height in buildings:
+            events.append((left, -height, right))  # Start of a building
+            events.append((right, 0, 0))  # End of a building
+        
+        # Sort events by x-coordinate, then by height
+        events.sort()
+
+        # Result and max-heap initialization
+        result = []
+        heap = [(0, float('inf'))]  # (negative height, end)
+
+        for x, neg_height, right in events:
+            # Remove past buildings from the heap
+            while heap[0][1] <= x:
+                heapq.heappop(heap)
+
+            # If it's the start of a building, add it to the heap
+            if neg_height != 0:
+                heapq.heappush(heap, (neg_height, right))
+
+            # If the current maximum height changes, update the skyline
+            max_height = -heap[0][0]
+            if not result or result[-1][1] != max_height:
+                result.append([x, max_height])
+        
+        return result
