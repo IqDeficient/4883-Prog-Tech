@@ -1,0 +1,23 @@
+class Solution:
+    def merge(self, intervals: List[List[int]]) -> List[List[int]]:
+        # Sort by first value within the interval list
+        intervals.sort(key=lambda x: x[0])
+
+        # Declare a new list for merging intervals onto
+        newList = []
+    
+        # Traverse through intervals through cycling list pairings
+        for interval in intervals:
+            # Check if newList is empty or checks if last newListd interval
+            # less than new interval which means there is no overlap
+            if not newList or newList[-1][1] < interval[0]:
+                # Append current interval to
+                newList.append(interval)
+            # Case if there is overlap
+            else:
+                # Update the preexisting ending interval of 
+                # newList to the new interval
+                newList[-1][1] = max(newList[-1][1], interval[1])
+                
+        # Return newList
+        return newList
