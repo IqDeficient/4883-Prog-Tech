@@ -1,0 +1,39 @@
+class Solution:
+    def gardenNoAdj(self, n: int, paths: List[List[int]]) -> List[int]:
+        # fast return for small n
+        if n <= 4:
+            return list(range(1, n + 1))
+
+        # Make flower type 0 for all gardens
+        flower = [0] * n
+
+        # Loop through range of n to set flower of each garden
+        for garden in range(n):
+            # Use a set to keep track of neighboring garden flowers
+            flowUsed = set()
+
+            # Loop for each pair in path and check if it connects to current garden
+            for u, v in paths:
+                # Check if u is current garden
+                # if true it means v is a neighbor
+                if u - 1 == garden:  
+                    # Check if v has a flower type already
+                    if flower[v - 1] != 0:
+                        # if true add that type to the list
+                        flowUsed.add(flower[v - 1])
+                # Check if v is the current garden
+                elif v - 1 == garden:
+                    # check if u has a flower type already
+                    if flower[u - 1] != 0:
+                        # if true add that type to the list
+                        flowUsed.add(flower[u - 1])
+
+            # for loop to assign flower type to flower
+            for x in range(1, 5):
+                # check if x is already used in the set/by another garden
+                if x not in flowUsed:
+                    # assign first available type to flower and return to loop
+                    flower[garden] = x
+                    break
+
+        return flower

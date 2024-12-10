@@ -1,0 +1,22 @@
+# import the heap library
+import heapq
+
+class Solution:
+    def kClosest(self, points: list[list[int]], k: int) -> list[list[int]]:
+        # Create an empty heap
+        heap = []
+        
+        # for each pair in points
+        for x, y in points:
+            # Find squared distance to origin
+            distance = x**2 + y**2
+            # push onto the heap
+            heapq.heappush(heap, (distance, [x, y]))
+        
+        
+        result = []
+        for i in range(k):
+            # find k smallest points
+            result.append(heapq.heappop(heap)[1])
+        
+        return result
